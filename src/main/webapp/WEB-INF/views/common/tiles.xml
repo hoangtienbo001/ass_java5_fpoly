@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+    "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+<!-- Base Define -->
+	<definition name="base.definition" template="/WEB-INF/views/common/classic.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/common/_header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/common/_menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/common/_footer.jsp" />
+	</definition>
+	<!-- -->
+	    <definition name="base.definition.client" template="/WEB-INF/views/common/classic_client.jsp">
+		<put-attribute name="title_client" value="" />
+		<put-attribute name="header_client" value="/WEB-INF/views/common/header_client.jsp" />
+		<put-attribute name="menu_client" value="/WEB-INF/views/common/menu_client.jsp" />
+		<put-attribute name="body_client" value="" />
+		<put-attribute name="footer_client" value="/WEB-INF/views/common/footer_client.jsp" />
+	</definition>
+<!-- Base Define END-->
+ 	<definition name="homePage" extends="base.definition.client">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body_client"
+			value="/WEB-INF/views/index.jsp" />
+	</definition>
+<!-- FOR CLIENT START -->
+
+<!-- FOR CLIENT END -->
+
+<!-- FOR ADMIN START -->
+
+	<definition name="productUpdatePage" extends="base.definition">
+		<put-attribute name="title" value="Product Update" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/products/update.jsp" />
+	</definition>
+	
+	<definition name="ProductCreatePage" extends="base.definition">
+		<put-attribute name="title" value="Product Create" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/products/create.jsp" />
+	</definition>
+	
+	<definition name="productListPage" extends="base.definition">
+		<put-attribute name="title" value="Product List" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/products/list.jsp" />
+	</definition>
+	
+	<definition name="detailProductPage" extends="base.definition">
+		<put-attribute name="title" value="Detail Product" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/products/detail_product.jsp" />
+	</definition>
+	
+	<definition name="createProductPage" extends="base.definition">
+		<put-attribute name="title" value="Create Product" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/products/create.jsp" />
+	</definition>
+<!-- FOR ADMIN END -->
+</tiles-definitions>
